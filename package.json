@@ -1,0 +1,20 @@
+{
+  "name": "vue3-loading-plug",
+  "version": "1.2.6",
+  "description": "🎉🎉🔥 基于Vue3的loading插件,下载后直接在需要使用的组件中、路由、请求拦截器调用即可，极简配置全局生效",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue3",
+    "loading",
+    "plugin"
+  ],
+  "author": "zk <1334132303@qq.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "csdn",
+    "url": "https+https://blog.csdn.net/m0_57904695?spm=1000.2115.3001.5343"
+  }
+}
