@@ -7,7 +7,7 @@ export function useLoading() {
 		visible.value = true;
 	};
 
-	let hideLoading = (clone = 30) => {
+	let hideLoading = (clone = 300) => {
 		setTimeout(() => {
 			visible.value = false;
 		}, clone);
