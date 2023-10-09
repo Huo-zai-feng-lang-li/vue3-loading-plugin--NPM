@@ -43,6 +43,10 @@ export default defineComponent({
 			type: String,
 			default: "darkorange",
 		},
+		mask: {
+			type: String,
+			default: "rgb(255 255 255 / 67%)",
+		},
 	},
 	setup(props) {
 		const { visible, showLoading, hideLoading } = useLoading();
@@ -53,6 +57,7 @@ export default defineComponent({
 			top: props.top,
 			left: props.left,
 			right: props.right,
+			mask: props.mask,
 		};
 	},
 });
@@ -74,8 +79,7 @@ export default defineComponent({
 		height: 150px;
 		background: transparent;
 		border-radius: 100%;
-		box-shadow: 0 0 0 100vw rgb(255 255 255 / 67%),
-			0 0 19px 0 rgb(0 0 0 / 16%) inset;
+		box-shadow: 0 0 0 100vw v-bind(mask), 0 0 19px 0 rgb(0 0 0 / 16%) inset;
 	}
 
 	.loader-cogs {

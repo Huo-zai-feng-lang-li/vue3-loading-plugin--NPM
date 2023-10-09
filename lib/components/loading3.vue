@@ -1,4 +1,5 @@
 <template>
+	<div class="loader-overlay" v-show="visible"></div>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
 		height="200px"
@@ -95,14 +96,34 @@ import { useLoading } from "./modus";
 
 export default defineComponent({
 	name: "Loading3",
-	setup() {
+	props: {
+		mask: {
+			type: String,
+			default: "rgb(255 255 255 / 67%)",
+		},
+	},
+	setup(props) {
 		const { visible, showLoading, hideLoading } = useLoading();
-		return { visible, showLoading, hideLoading };
+		return {
+			visible,
+			showLoading,
+			hideLoading,
+			mask: props.mask,
+		};
 	},
 });
 </script>
 
 <style scoped>
+.loader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: v-bind(mask);
+	z-index: 9999;
+}
 .pencil {
 	position: fixed;
 	z-index: 9999;

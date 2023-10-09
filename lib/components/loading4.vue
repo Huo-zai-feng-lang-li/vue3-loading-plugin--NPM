@@ -1,4 +1,5 @@
 <template>
+	<div class="loader-overlay" v-show="visible"></div>
 	<div class="wrap" v-show="visible">
 		<div class="bar">
 			<div class="ball"></div>
@@ -25,6 +26,10 @@ export default defineComponent({
 			type: String,
 			default: "#ffdaaf",
 		},
+		mask: {
+			type: String,
+			default: "rgb(255 255 255 / 67%)",
+		},
 	},
 	setup(props) {
 		const { visible, showLoading, hideLoading } = useLoading();
@@ -35,14 +40,25 @@ export default defineComponent({
 			ball: props.ball,
 			dot: props.dot,
 			bar: props.bar,
+			mask: props.mask,
 		};
 	},
 });
 </script>
 
 <style scoped>
+.loader-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: v-bind(mask);
+	z-index: 999;
+}
 .wrap {
 	position: fixed;
+	z-index: 9999;
 	top: 50%;
 	left: 50%;
 	width: 100vw;
