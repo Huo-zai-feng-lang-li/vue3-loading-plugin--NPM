@@ -9,18 +9,14 @@
 npm install vue3-loading-plug
 ```
 
-## 🛹 演示地址：
+## 🛹 简介苍白请 您移步文档：
 
-[http://project.webcats.cn/bx/43924/16191](http://project.webcats.cn/bx/43924/16191)
+[一键快阅文档](https://huozaifenlangli.github.io/vue3-tools-docs/vue3-loading-plug.html)
 
 ## 🛹 使用方法
 
-> ## 说明：
->
 > 内置两种 loading 【可自行配置】
->
 > ​ Loading 是 大 loading 可以用于刷新项目页面、路由跳转 。在路由中引入一次 即可全局生效，极简配置
->
 > ​ smallLoading 是小圆圈 loading，一般用于接口请求展示。可以请求拦截器中开启，全局接口生效，极简配置
 
 在你的主应用程序入口文件（例如 main.js）中，导入并使用 loading ：
@@ -36,7 +32,7 @@ app.use(Loading).mount("#app");
 declare module "vue3-loading-plug";
 ```
 
-router
+- router
 
 ```javascript
 router.beforeEach((to, from, next) => {
@@ -45,11 +41,11 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to) => {
-	if (to.meta.loading) app.config.globalProperties.$Loading.hideLoading();
+	if (to.meta.loading) app.config.globalProperties.$Loading.hideLoading()();
 });
 ```
 
-scrvies
+- scrvies
 
 ```javascript
 const hideLoading = () => app.config.globalProperties.$smallLoading.hideLoading;
