@@ -19,7 +19,7 @@ export default defineComponent({
 			visible.value = true;
 		};
 
-		let hideLoading = (timerHidden: boolean) => {
+		let hideLoading = (timerHidden?: boolean) => {
 			// 解决loading200ms后关闭，如果多次快速调用接口，其接口设置loading不可见，但是loading还是会显示的问题
 			// 原因：接口发起会触发加载loading，200ms没到第二个接口又发起了，导致loading设置关闭还是会显示
 			// 200ms关闭loading是为了显示 100% 的进度条
