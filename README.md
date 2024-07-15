@@ -11,10 +11,10 @@ npm install vue3-loading-plug
 
 ## 🛹 简介苍白请 您移步文档：
 
-[文档](https://zhang-kun8888.gitee.io/vue3-tools-docs/vue3-loading-plug.html)
+[文档](https://huo-zai-feng-lang-li.github.io/vue3-tools-docs/vue3-loading-plug.html)
 <br />
-[演示](https://zhang-kun8888.gitee.io/vite--ts--vue3---template/#/home)
+[演示](https://huo-zai-feng-lang-li.github.io/Vue3-template/#/monitoringView)
 
 ## 🛹 使用方法
 
-内置七款 Loading ，可以配置 loadingType 属性进行指定。没有 loadingType 属性时，默认每次刷新页面随机展示。
+内置七款 Loading ，可以配置 loadingType 属性进行指定。没有 loadingType 属性时，默认**每次刷新页面随机展示**。
